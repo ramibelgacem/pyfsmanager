@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfsmanager"
+version = "0.0.1"
+description = "My awesome CLI application"
+readme = "README.md"
+authors = [{ name = "Rami Belgacem", email = "ramibelgacem@gmail.com" }]
+
+[project.scripts]
+pyfsmanager = "pyfsmanager.cli:main"
