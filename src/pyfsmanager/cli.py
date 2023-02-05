@@ -1,3 +1,13 @@
+"""New files creator
+
+This script allows the user to create new files
+based on builtin templates or empty content.
+
+This tool accepts the name of the new file to create,
+the template extension to duplicate of the directory
+where to create the file.
+"""
+
 import argparse
 import logging
 
@@ -13,8 +23,13 @@ TEMPLATES_EXTENSION = ["json", "txt", "py"]
 
 
 def main():
-    """
+    """Build the command line interface with argparse
+
+    This CLI allows the user to create an empty file or
+    a file based on a predefined template.
+
     Example:
+    ----------
     > pyfsmanager blank notes.txt -d notes
     > pyfsmanager template txt notes.txt -d notes
     """

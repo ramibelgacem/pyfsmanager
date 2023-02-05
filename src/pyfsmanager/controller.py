@@ -9,6 +9,20 @@ TEMPLATES_SUFFIX = "template"
 
 
 def create_file(args, content=None):
+    """Create a file based on a predefined template extension
+
+    Parameters
+    ----------
+    args : Namespace
+            The arguments that are passed through the command line
+    content : str, optional
+                The content of the new file to create (default is None)
+
+    Raises
+    ------
+    FileExistsError
+            If the name of the file to create already exists.
+    """
     # create the directory of the file
     full_path = Path()
     if args.dir:
@@ -30,6 +44,13 @@ def create_file(args, content=None):
 
 
 def create_from_template(args):
+    """Create a file based on a predefined template extension
+
+    Parameters
+    ----------
+    args : Namespace
+            The arguments that are passed through the command line
+    """
     from_file = Path(TEMPLATES_PATH + TEMPLATES_SUFFIX + "." + args.tname)
 
     if from_file.exists():
